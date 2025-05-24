@@ -1,7 +1,7 @@
 {
-  "name": "record-updater",
+  "name": "record-backend",
   "version": "1.0.0",
-  "description": "Simple Express backend to update and check records",
+  "description": "Node backend to update and check records with error handling",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
