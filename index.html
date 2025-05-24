@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><title>Record Updater</title></head>
+<body>
+  <h1>Update Record</h1>
+  <input id="id" placeholder="Record ID"><br>
+  <input id="value" placeholder="Record Value"><br>
+  <button onclick="updateRecord()">Submit</button>
+
+  <pre id="response"></pre>
+
+  <script>
+    async function updateRecord() {
+      const id = document.getElementById('id').value;
+      const value = document.getElementById('value').value;
+
+      const res = await fetch('https://backendtest-grqf.onrender.com', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, value })
+      });
+      
+      const data = await res.json();
+      document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+    }
+  </script>
+</body>
+</html>
