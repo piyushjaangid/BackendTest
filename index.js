@@ -69,3 +69,10 @@ app.get('/check/:id', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
+// Get all current records
+app.get('/records', (req, res) => {
+  return res.json({
+    status: "success",
+    records: database
+  });
+});
