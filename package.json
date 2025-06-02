@@ -1,13 +1,15 @@
 {
   "name": "record-backend",
   "version": "1.0.0",
-  "description": "Node backend to update and check records with error handling",
+  "description": "Node backend to update and check records using MongoDB",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "cors": "^2.8.5"
+    "mongoose": "^7.6.1"
   }
 }
